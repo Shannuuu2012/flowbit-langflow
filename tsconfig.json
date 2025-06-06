@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",                        // ✅ Better Node.js support
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",             // ✅ Keep for Next.js App Router
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "types": ["node"],                         // ✅ Add for fs/path/cron support
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "lib",                                     // ✅ Include server-side helpers
+    "app"
+  ],
+  "exclude": ["node_modules"]
+}

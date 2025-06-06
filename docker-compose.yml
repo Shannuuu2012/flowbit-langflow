@@ -1,0 +1,18 @@
+services:
+  langflow:
+    image: langflowai/langflow:latest
+    ports:
+      - "7860:7860"
+    environment:
+      - LANGFLOW_DEFAULT_FLOWS_PATH=/flows
+      - LANGFLOW_DATABASE_URL=sqlite:////data/langflow.db
+    volumes:
+      - ./flows:/flows
+      - ./data:/data
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"

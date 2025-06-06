@@ -1,5 +1,4 @@
-# flowbit-langflow
-
+# 🧠 FlowBit + LangFlow Automation Orchestrator
 
 This project integrates visual AI agents built using **LangFlow** with a workflow frontend powered by **FlowBit (Next.js)**. It supports Email parsing, PDF extraction, JSON processing, and Classification workflows.
 
@@ -81,22 +80,8 @@ cd flowbit-langflow-project
 Create `.env.local`:
 
 ```env
-# .env.local
-# n8n API (if used)
-NEXT_PUBLIC_N8N_URL=http://localhost:5678
-
-# LangFlow API URL
-NEXT_PUBLIC_LANGFLOW_URL=http://localhost:7860
-
-# FlowBit API Base URL
 NEXT_PUBLIC_API_URL=http://localhost:3000
-
-#flow-ids:
-
-classifier-id=1ff10120-2798-4673-9aee-b77f2a99157c/folder/835a05ea-84d9-4c24-bd49-b56e4279f9d5
-email-id=a7ad34df-0cef-4a66-9d7e-0d91cc5e1f9c/folder/835a05ea-84d9-4c24-bd49-b56e4279f9d5
-json-id=56222060-3a79-425e-bedf-d09a18437c24/folder/835a05ea-84d9-4c24-bd49-b56e4279f9d5
-pdf-id=7359775a-121b-4bfb-8219-b04be06e9597/folder/835a05ea-84d9-4c24-bd49-b56e4279f9d5
+LANGFLOW_API_URL=http://localhost:7860
 ```
 
 ### 3. Start Docker
@@ -179,7 +164,7 @@ services:
 
 ---
 
-## 📸 Screenshot[outputlogs]
+## 📸 Screenshot
 
 ![langflow](docs/ss1.png)
 ![flowbit](docs/ss2.png)
